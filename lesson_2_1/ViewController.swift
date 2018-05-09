@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,6 +23,18 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        let login = userNameTextField.text!
+        let password = passwordTextField.text!
+        guard login == "admin" && password == "1" else {
+            print("неуспешная авторизация")
+            return
+        }
+            print("успешная авторизация")
+
+    }
+    
 
 
 }
