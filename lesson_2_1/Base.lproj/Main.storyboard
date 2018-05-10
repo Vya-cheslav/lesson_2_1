@@ -28,7 +28,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="W8o-2B-rPX">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76f-W2-T1X">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76f-W2-T1X" userLabel="scrollView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5h-j5-0mR">
@@ -135,6 +135,7 @@
                     </view>
                     <connections>
                         <outlet property="passwordTextField" destination="T4U-Qq-CdS" id="GhG-ee-xch"/>
+                        <outlet property="scrollView" destination="76f-W2-T1X" id="JUM-wO-ksi"/>
                         <outlet property="userNameTextField" destination="PBX-wd-o6l" id="C00-8t-RaW"/>
                     </connections>
                 </viewController>

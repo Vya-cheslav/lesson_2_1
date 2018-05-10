@@ -6,7 +6,7 @@
          contextName = "ViewController.loginButtonTapped(_:):ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "!(login == &quot;admin&quot; &amp;&amp; password == &quot;1&quot;) ">
+               value = "login == &quot;admin&quot; &amp;&amp; password == &quot;1&quot;">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
