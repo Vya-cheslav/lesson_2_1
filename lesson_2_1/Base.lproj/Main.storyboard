@@ -35,13 +35,13 @@
                                         <rect key="frame" x="8" y="8" width="359" height="639"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AlX-h1-hFI">
-                                                <rect key="frame" x="40" y="358" width="74" height="20"/>
+                                                <rect key="frame" x="36" y="358" width="74" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Qom-Pv-BEM">
-                                                <rect key="frame" x="110" y="100" width="147" height="150"/>
+                                                <rect key="frame" x="106" y="100" width="147" height="150"/>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите имя пользователя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PBX-wd-o6l" userLabel="TextFieldUserName">
                                                 <rect key="frame" x="36" y="294" width="287" height="44"/>
@@ -54,7 +54,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT2-TF-rpZ">
-                                                <rect key="frame" x="40" y="270" width="81" height="20"/>
+                                                <rect key="frame" x="36" y="270" width="81" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -70,7 +70,7 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIc-Lt-3bx">
-                                                <rect key="frame" x="40" y="575" width="287" height="44"/>
+                                                <rect key="frame" x="36" y="575" width="287" height="44"/>
                                                 <color key="backgroundColor" red="1" green="0.47843137254901957" blue="0.035294117647058823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="pYt-dh-P5b"/>
@@ -107,7 +107,6 @@
                                             <constraint firstItem="T4U-Qq-CdS" firstAttribute="top" secondItem="AlX-h1-hFI" secondAttribute="bottom" constant="4" id="sZz-uo-pSG"/>
                                             <constraint firstItem="AlX-h1-hFI" firstAttribute="top" secondItem="PBX-wd-o6l" secondAttribute="bottom" constant="20" id="t43-Ac-ZgI"/>
                                             <constraint firstItem="LT2-TF-rpZ" firstAttribute="leading" secondItem="mIc-Lt-3bx" secondAttribute="leading" id="uzk-XP-rdM"/>
-                                            <constraint firstItem="LT2-TF-rpZ" firstAttribute="leading" secondItem="I5h-j5-0mR" secondAttribute="leading" constant="40" id="ww9-Ta-b0N"/>
                                         </constraints>
                                     </view>
                                 </subviews>
