@@ -10,5 +10,13 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "bookmarksTableViewController.prepare(for:sender:):bookmarksTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "row.description">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -22,6 +22,8 @@ class ViewController: UIViewController {
             #selector(self.hideKeyboard))
         // присваиваем его UIScrollVIew
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
+        
+        //navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,15 +32,24 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {
-        let login = userNameTextField.text!
-        let password = passwordTextField.text!
-        guard login == "admin" && password == "1" else {
-            print("неуспешная авторизация")
-            return
-        }
-            print("успешная авторизация")
+        performSegue(withIdentifier: "SegueTo", sender: nil)
+//        let login = userNameTextField.text!
+//        let password = passwordTextField.text!
+//        guard login == "admin" && password == "1" else {
+//            print("неуспешная авторизация")
+//            return
+//        }
+//            print("успешная авторизация")
 
     }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return false
+    }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+
+    }
+    
     
     @objc func hideKeyboard() {
         self.scrollView?.endEditing(true)
@@ -71,6 +82,13 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector:
             #selector(self.keyboardWillBeHidden(notification:)), name: NSNotification.Name.UIKeyboardWillHide,
                                                                  object: nil)
+        navigationController?.hidesBarsOnSwipe = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
 
