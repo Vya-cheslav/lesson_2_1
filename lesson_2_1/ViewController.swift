@@ -31,16 +31,23 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SegueToTabBar" {
+//на потом
+        }
+    }
+    
     @IBAction func loginButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "SegueTo", sender: nil)
-//        let login = userNameTextField.text!
-//        let password = passwordTextField.text!
-//        guard login == "admin" && password == "1" else {
-//            print("неуспешная авторизация")
-//            return
-//        }
-//            print("успешная авторизация")
-
+        
+        let login = userNameTextField.text!
+        let password = passwordTextField.text!
+        guard login == "admin" && password == "1" else {
+            print("неуспешная авторизация")
+            return
+        }
+        performSegue(withIdentifier: "SegueToTabBar", sender: nil)
+        
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         return false
@@ -82,13 +89,11 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector:
             #selector(self.keyboardWillBeHidden(notification:)), name: NSNotification.Name.UIKeyboardWillHide,
                                                                  object: nil)
-        navigationController?.hidesBarsOnSwipe = true
-        navigationController?.setNavigationBarHidden(true, animated: true)
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
 
