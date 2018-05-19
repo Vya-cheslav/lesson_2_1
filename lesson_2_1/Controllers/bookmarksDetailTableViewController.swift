@@ -10,7 +10,7 @@ import UIKit
 
 class bookmarksDetailTableViewController: UITableViewController {
 
-    var strList = [String]()
+    var strList: [String] = ["Друзья Оушена","Супостаты Оушена", "Остальные"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,6 +44,7 @@ class bookmarksDetailTableViewController: UITableViewController {
         
         // Configure the cell...
         cell.textLabel?.text = strList[indexPath.row]
+        //
         return cell
     }
 

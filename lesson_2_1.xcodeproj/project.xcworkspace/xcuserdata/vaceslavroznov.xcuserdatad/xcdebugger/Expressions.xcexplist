@@ -3,14 +3,6 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "ViewController.loginButtonTapped(_:):ViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "login == &quot;admin&quot; &amp;&amp; password == &quot;1&quot;">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "bookmarksTableViewController.prepare(for:sender:):bookmarksTableViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -23,6 +15,42 @@
          <PersistentStrings>
             <PersistentString
                value = "segue.identifier">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.loginButtonTapped(_:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "login == &quot;admin&quot; &amp;&amp; password == &quot;1&quot;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FrendCollectionViewController.collectionView(_:cellForItemAt:):FrendCollectionViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UIImage(named: frend.description)">
+            </PersistentString>
+            <PersistentString
+               value = "&quot;&#x414;&#x435;&#x43d;&#x43d;&#x438; &#x41e;&#x443;&#x448;&#x435;&#x43d;&quot;">
+            </PersistentString>
+            <PersistentString
+               value = "frend">
+            </PersistentString>
+            <PersistentString
+               value = "named">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "history_TableViewController.viewDidLoad():historyTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "navigationController?.tabBarController?.childViewControllers[1].childViewControllers">
+            </PersistentString>
+            <PersistentString
+               value = "navigationController?.tabBarController">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

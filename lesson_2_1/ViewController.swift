@@ -38,14 +38,15 @@ class ViewController: UIViewController {
         }
     }
     
+    
     @IBAction func loginButtonTapped(_ sender: Any) {
         
-        let login = userNameTextField.text!
-        let password = passwordTextField.text!
-        guard login == "admin" && password == "1" else {
-            print("неуспешная авторизация")
-            return
-        }
+//        let login = userNameTextField.text!
+//        let password = passwordTextField.text!
+//        guard login == "admin" && password == "1" else {
+//            print("неуспешная авторизация")
+//            return
+//        }
         performSegue(withIdentifier: "SegueToTabBar", sender: nil)
         
     }

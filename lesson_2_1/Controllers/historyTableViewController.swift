@@ -9,11 +9,21 @@
 import UIKit
 
 class history_TableViewController: UITableViewController {
-
-    var strList: [String] = ["Москва", "London"]
+   
+     var strList: [String] = ["Денни Оушен","Расти Райан","Лайнус Колдуэлл"]
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //navigationController?.tabBarItem.badgeValue =   String(strList.count)
+//        if let VC: history_TableViewController = (navigationController?.tabBarController?.viewControllers![0].navigationController?.viewControllers as? history_TableViewController)! {
+//            print("1")
+//        }
+        navigationController?.tabBarController?.childViewControllers[0].tabBarItem.badgeValue = String(strList.count)
+        if let groupControllerVC: groupsTableViewController = navigationController?.tabBarController?.childViewControllers[1].childViewControllers[0] as? groupsTableViewController {
+            navigationController?.tabBarController?.childViewControllers[1].tabBarItem.badgeValue = String(groupControllerVC.strList.count)
+        }
+        
+       
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -40,11 +50,23 @@ class history_TableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AllFrendsCell
 
         // Configure the cell...
-        cell.textLabel?.text = strList[indexPath.row]
+        cell.FrendsLabel.text = strList[indexPath.row]
+        cell.FrendView.image = UIImage(named: strList[indexPath.row])
         return cell
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueCollectionFrend" {
+            if let indexPath = tableView.indexPathForSelectedRow{
+                segue.destination.title = strList[indexPath.row]
+                if let destinationVC: FrendCollectionViewController = segue.destination as! FrendCollectionViewController {
+                    destinationVC.frend = strList[indexPath.row]
+                }
+            }
+            
+        }
     }
  
 

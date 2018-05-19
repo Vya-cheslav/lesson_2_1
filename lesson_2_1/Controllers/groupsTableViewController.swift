@@ -8,19 +8,47 @@
 
 import UIKit
 
-class bookmarksTableViewController: UITableViewController {
+class groupsTableViewController: UITableViewController {
 
-    var strList: [String] = ["London", "Paris"]
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    var strList: [String] = ["Друзья Оушена"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        //navigationController?.tabBarItem.badgeValue =   String(strList.count)
 
+        //navigationController?.tabBarController?.childViewControllers[0].tabBarItem.badgeValue = "00"
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    @IBAction func addGroup(segue: UIStoryboardSegue){
+        guard let groupAddController = segue.source as? groupAddTableViewController else {
+            return
+        }
+        if let indexPath = groupAddController.tableView.indexPathForSelectedRow {
+        
+            var group = ""
+            
+            if (groupAddController.filter.count > 0) {
+               
+                group = groupAddController.filter[indexPath.row]
+            }
+            else {
+                
+                group = groupAddController.strList[indexPath.row]
+            }
+            
+                
+            
+            guard !strList.contains(group) else {return}
+            strList.append(group)
+            tableView.reloadData()
+            navigationController?.tabBarItem.badgeValue =   String(strList.count)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -40,26 +68,36 @@ class bookmarksTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! myGroupsTableViewCell
 
         // Configure the cell...
-        cell.textLabel?.text = strList[indexPath.row]
+        cell.groupTextLabel.text = strList[indexPath.row]
+        cell.groupImageView.image = UIImage(named: strList[indexPath.row])
         return cell
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueBookMarksDetails" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-            let destinationVC: bookmarksDetailTableViewController = segue.destination as! bookmarksDetailTableViewController
+        if segue.identifier == "segueAddGroups" {
             
-            let word = strList[indexPath.row]
-                for row in word {
-                    destinationVC.strList.append(row.description)
+            let destinationVC: groupAddTableViewController = segue.destination as! groupAddTableViewController
+            for (_, value1) in strList.enumerated() {
+                for (index2, value2) in destinationVC.strList.enumerated() {
+                    if value1 == value2{
+                        destinationVC.strList.remove(at: index2)
+                    }
                 }
             }
         }
     }
- 
+//
 
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            strList.remove(at: indexPath.row)
+            tableView.reloadData()
+            navigationController?.tabBarItem.badgeValue =   String(strList.count)
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
