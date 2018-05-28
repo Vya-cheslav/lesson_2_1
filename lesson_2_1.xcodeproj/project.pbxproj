@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		781EABB320AECC9100F34660 /* addGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EABB220AECC9100F34660 /* addGroupCell.swift */; };
+		781EF05620B55E90005911DF /* VKLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EF05520B55E90005911DF /* VKLoginViewController.swift */; };
+		78229AA620B6996F000E3DD8 /* VKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78229AA520B6996F000E3DD8 /* VKService.swift */; };
 		782CA64D20A1AA980020A75A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CA64C20A1AA980020A75A /* AppDelegate.swift */; };
 		782CA64F20A1AA980020A75A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CA64E20A1AA980020A75A /* ViewController.swift */; };
 		782CA65220A1AA980020A75A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782CA65020A1AA980020A75A /* Main.storyboard */; };
@@ -21,11 +23,14 @@
 		784509AE20AC3CAC00294A9B /* addGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784509AD20AC3CAC00294A9B /* addGroupTableViewCell.swift */; };
 		784509B020AC48D400294A9B /* groupAddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784509AF20AC48D400294A9B /* groupAddTableViewController.swift */; };
 		784D066D20A6E8AF00CC2D7F /* groupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784D066C20A6E8AF00CC2D7F /* groupsTableViewController.swift */; };
+		785DC84A20B9FCCA002C5F01 /* VKPresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785DC84920B9FCCA002C5F01 /* VKPresentationViewController.swift */; };
 		78BF283520A6E1AD0004E824 /* historyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BF283420A6E1AD0004E824 /* historyTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		781EABB220AECC9100F34660 /* addGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addGroupCell.swift; sourceTree = "<group>"; };
+		781EF05520B55E90005911DF /* VKLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginViewController.swift; sourceTree = "<group>"; };
+		78229AA520B6996F000E3DD8 /* VKService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKService.swift; sourceTree = "<group>"; };
 		782CA64920A1AA980020A75A /* lesson_2_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lesson_2_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		782CA64C20A1AA980020A75A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		782CA64E20A1AA980020A75A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +46,7 @@
 		784509AD20AC3CAC00294A9B /* addGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addGroupTableViewCell.swift; sourceTree = "<group>"; };
 		784509AF20AC48D400294A9B /* groupAddTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupAddTableViewController.swift; sourceTree = "<group>"; };
 		784D066C20A6E8AF00CC2D7F /* groupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupsTableViewController.swift; sourceTree = "<group>"; };
+		785DC84920B9FCCA002C5F01 /* VKPresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKPresentationViewController.swift; sourceTree = "<group>"; };
 		78BF283420A6E1AD0004E824 /* historyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		781EF05720B55F17005911DF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				78229AA520B6996F000E3DD8 /* VKService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		782CA64020A1AA980020A75A = {
 			isa = PBXGroup;
 			children = (
@@ -74,12 +88,12 @@
 		782CA64B20A1AA980020A75A /* lesson_2_1 */ = {
 			isa = PBXGroup;
 			children = (
+				781EF05720B55F17005911DF /* Services */,
 				782CA66120A1CC000020A75A /* Helpers */,
 				782CA66020A1CBC20020A75A /* Controllers */,
 				782CA65F20A1CBB50020A75A /* Views */,
 				782CA65E20A1CB9D0020A75A /* Models */,
 				782CA64C20A1AA980020A75A /* AppDelegate.swift */,
-				782CA64E20A1AA980020A75A /* ViewController.swift */,
 				782CA65020A1AA980020A75A /* Main.storyboard */,
 				782CA65320A1AA980020A75A /* Assets.xcassets */,
 				782CA65520A1AA980020A75A /* LaunchScreen.storyboard */,
@@ -110,10 +124,13 @@
 		782CA66020A1CBC20020A75A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				782CA64E20A1AA980020A75A /* ViewController.swift */,
 				784509A920AAD90C00294A9B /* FrendCollectionViewController.swift */,
 				784D066C20A6E8AF00CC2D7F /* groupsTableViewController.swift */,
 				78BF283420A6E1AD0004E824 /* historyTableViewController.swift */,
 				784509AF20AC48D400294A9B /* groupAddTableViewController.swift */,
+				781EF05520B55E90005911DF /* VKLoginViewController.swift */,
+				785DC84920B9FCCA002C5F01 /* VKPresentationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -206,9 +223,12 @@
 				784509AA20AAD90C00294A9B /* FrendCollectionViewController.swift in Sources */,
 				784509A820AACF8700294A9B /* FrendCollectionViewCell.swift in Sources */,
 				782CA64F20A1AA980020A75A /* ViewController.swift in Sources */,
+				785DC84A20B9FCCA002C5F01 /* VKPresentationViewController.swift in Sources */,
 				782CA66320A1CC590020A75A /* UIView+Layer.swift in Sources */,
 				784509AC20AC202400294A9B /* myGroupsTableViewCell.swift in Sources */,
 				784509A420AA017D00294A9B /* AllFrendsCell.swift in Sources */,
+				781EF05620B55E90005911DF /* VKLoginViewController.swift in Sources */,
+				78229AA620B6996F000E3DD8 /* VKService.swift in Sources */,
 				782CA64D20A1AA980020A75A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,7 +370,7 @@
 				DEVELOPMENT_TEAM = ST55Z8AWX9;
 				INFOPLIST_FILE = lesson_2_1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "sug.lesson-2-1";
+				PRODUCT_BUNDLE_IDENTIFIER = sug.vk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -365,7 +385,7 @@
 				DEVELOPMENT_TEAM = ST55Z8AWX9;
 				INFOPLIST_FILE = lesson_2_1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "sug.lesson-2-1";
+				PRODUCT_BUNDLE_IDENTIFIER = sug.vk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
