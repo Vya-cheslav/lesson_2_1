@@ -7,19 +7,36 @@
 //
 
 import UIKit
+import Kingfisher
 
-class history_TableViewController: UITableViewController {
+class userTableViewController: UITableViewController {
    
-     var strList: [String] = ["Денни Оушен","Расти Райан","Лайнус Колдуэлл"]
+    var token: String = ""
+    let service = VKService()
+    
+     var userList: [Users] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        //navigationController?.tabBarItem.badgeValue =   String(strList.count)
-//        if let VC: history_TableViewController = (navigationController?.tabBarController?.viewControllers![0].navigationController?.viewControllers as? history_TableViewController)! {
-//            print("1")
-//        }
-        navigationController?.tabBarController?.childViewControllers[0].tabBarItem.badgeValue = String(strList.count)
+
+        navigationController?.tabBarController?.childViewControllers[0].tabBarItem.badgeValue = String(userList.count)
         if let groupControllerVC: groupsTableViewController = navigationController?.tabBarController?.childViewControllers[1].childViewControllers[0] as? groupsTableViewController {
-            navigationController?.tabBarController?.childViewControllers[1].tabBarItem.badgeValue = String(groupControllerVC.strList.count)
+            groupControllerVC.token = token
+//            navigationController?.tabBarController?.childViewControllers[1].tabBarItem.badgeValue = String(groupControllerVC.userList.count)
+        }
+        
+        
+        service.getUsers(token: token) { users, error in
+            if let error = error {
+                // handle error
+                print(error)
+                return
+            }
+            
+            if let users = users {
+                //print(#function)
+                self.userList = users
+                self.tableView?.reloadData()
+            }
         }
         
        
@@ -45,7 +62,7 @@ class history_TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return strList.count
+        return userList.count
     }
 
     
@@ -53,21 +70,24 @@ class history_TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AllFrendsCell
 
         // Configure the cell...
-        cell.FrendsLabel.text = strList[indexPath.row]
-        cell.FrendView.image = UIImage(named: strList[indexPath.row])
+        cell.FrendsLabel.text = ("\(userList[0].last_name) \(userList[0].first_name)")//""//strList[indexPath.row]
+        if let icon = URL(string: userList[0].photo_50) {
+            cell.FrendView.kf.setImage(with: icon)
+        }
+        
         return cell
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueCollectionFrend" {
-            if let indexPath = tableView.indexPathForSelectedRow{
-                segue.destination.title = strList[indexPath.row]
-                if let destinationVC: FrendCollectionViewController = segue.destination as! FrendCollectionViewController {
-                    destinationVC.frend = strList[indexPath.row]
-                }
-            }
-            
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "segueCollectionFrend" {
+//            if let indexPath = tableView.indexPathForSelectedRow{
+//                segue.destination.title = strList[indexPath.row]
+//                if let destinationVC: FrendCollectionViewController = segue.destination as! FrendCollectionViewController {
+//                    destinationVC.frend = strList[indexPath.row]
+//                }
+//            }
+//
+//        }
+//    }
  
 
     /*

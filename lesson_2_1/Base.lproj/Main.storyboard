@@ -142,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="416.80000000000001" y="102.99850074962519"/>
+            <point key="canvasLocation" x="-682" y="-69"/>
         </scene>
         <!-- -->
         <scene sceneID="n4I-Ca-MM4">
@@ -175,12 +175,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="webView" destination="Yn6-Ip-Z1E" id="Gbz-tu-Hd8"/>
-                        <segue destination="9nS-ox-gwM" kind="show" identifier="segueLaterAuto" id="krU-2y-4AC"/>
+                        <segue destination="DXx-AB-VtH" kind="show" identifier="segueLaterLogin" id="tQ2-xm-lTg"/>
+                        <segue destination="9nS-ox-gwM" kind="show" identifier="segueView" id="hcp-Pw-WNN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fyh-Vj-Q4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="762.39999999999998" y="781.25937031484261"/>
+            <point key="canvasLocation" x="404" y="356"/>
         </scene>
         <!--Presentation View Controller-->
         <scene sceneID="1IA-KW-xeB">
@@ -283,7 +284,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Vm-jk-lev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1600.8" y="780.35982008995506"/>
+            <point key="canvasLocation" x="841" y="-728"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wQo-6d-NAr">
@@ -359,7 +360,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5LD-dl-0J1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="416.80000000000001" y="-600.44977511244383"/>
+            <point key="canvasLocation" x="151" y="-728"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aVh-ec-CDC">
@@ -521,7 +522,7 @@
         <!--Друзья-->
         <scene sceneID="oaQ-JK-4Q2">
             <objects>
-                <tableViewController id="Z9J-df-d6z" customClass="history_TableViewController" customModule="lesson_2_1" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Z9J-df-d6z" customClass="userTableViewController" customModule="lesson_2_1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OWe-Xh-ktO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -646,7 +647,6 @@
                     <tabBarItem key="tabBarItem" title="Группы" image="group" id="Tpp-ou-Chq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s2D-1y-HnU">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -667,7 +667,6 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HuX-cQ-0hT">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -697,7 +696,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNK-2Q-tCO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-22" y="780"/>
+            <point key="canvasLocation" x="-530" y="665"/>
         </scene>
     </scenes>
     <resources>
@@ -708,4 +707,7 @@
         <image name="vk" width="300" height="239"/>
         <image name="Друзья Оушена" width="120" height="120"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tQ2-xm-lTg"/>
+    </inferredMetricsTieBreakers>
 </document>
