@@ -522,7 +522,7 @@
         <!--Друзья-->
         <scene sceneID="oaQ-JK-4Q2">
             <objects>
-                <tableViewController id="Z9J-df-d6z" customClass="userTableViewController" customModule="lesson_2_1" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Z9J-df-d6z" customClass="UserTableViewController" customModule="lesson_2_1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OWe-Xh-ktO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -535,12 +535,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JfO-JM-Yip">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JfO-JM-Yip">
                                             <rect key="frame" x="7" y="0.0" width="47" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="50"/>
+                                                    <real key="value" value="40"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
@@ -580,10 +580,10 @@
             </objects>
             <point key="canvasLocation" x="2956" y="-312.59370314842579"/>
         </scene>
-        <!--Frend Collection View Controller-->
+        <!--Photo View Collection View Controller-->
         <scene sceneID="C8Y-Lw-Gfg">
             <objects>
-                <collectionViewController id="KdA-lg-pnW" customClass="FrendCollectionViewController" customModule="lesson_2_1" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="KdA-lg-pnW" customClass="PhotoViewCollectionViewController" customModule="lesson_2_1" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="tab" dataMode="prototypes" id="BTc-vH-Wgw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

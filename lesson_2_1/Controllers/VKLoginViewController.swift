@@ -28,7 +28,10 @@ class VKLoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        print(#function)
         if segue.identifier == "segueLaterLogin" {
-            if let userVC: userTableViewController = (segue.destination.childViewControllers[0].childViewControllers[0] as? userTableViewController) {
+//            if let userVC: UserTableViewController = (segue.destination.childViewControllers[0].childViewControllers[0] as? UserTableViewController) {
+//                userVC.token = token
+//            }
+            if let tabBarVC = segue.destination as? UITabBarController, let naviVC = tabBarVC.childViewControllers[0] as? UINavigationController, let userVC = naviVC.childViewControllers[0] as? UserTableViewController {
                 userVC.token = token
             }
         }
@@ -82,7 +85,7 @@ extension VKLoginViewController: WKNavigationDelegate {
 //            service.getGroups(token: token)
 //            service.getPhotosAll(token: token)
 //            service.search(token: token)
-            performSegue(withIdentifier: "segueLaterLogin", sender: nil)//segueView
+            performSegue(withIdentifier: "segueLaterLogin", sender: nil)// segueView 
         }
         decisionHandler(.cancel)
         

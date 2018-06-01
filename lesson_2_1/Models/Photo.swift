@@ -1,5 +1,5 @@
 //
-//  Groups.swift
+//  Photo.swift
 //  lesson_2_1
 //
 //  Created by Вячеслав Рожнов on 31.05.18.
@@ -9,15 +9,13 @@
 import Foundation
 import SwiftyJSON
 
-class Group {
+class Photo {
     
-    var name: String = ""
     var id: String = ""
-    var photo50: String = ""
+    var url: String = ""
     
     init(json: JSON) {
-        self.name = json["name"].stringValue
         self.id = json["id"].stringValue
-        self.photo50 = json["photo_50"].stringValue
+        self.url = json["sizes"][0]["url"].stringValue
     }
 }

@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Kingfisher
 
 private let reuseIdentifier = "Cell"
 
-class FrendCollectionViewController: UICollectionViewController {
+class PhotoViewCollectionViewController: UICollectionViewController {
 
-    var frend = ""
+    var token: String = ""
+    let service = VKService()
+    
+    var photoList: [Photo] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +26,21 @@ class FrendCollectionViewController: UICollectionViewController {
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
+        
+        service.getPhotosAll(token: token) { photo, error in
+            if let error = error {
+                // handle error
+                print(error)
+                return
+            }
+            
+            if let photo = photo {
+                //print(#function)
+                self.photoList = photo
+                self.collectionView?.reloadData()
+            }
+        }
+        
         // Do any additional setup after loading the view.
     }
 
@@ -50,18 +69,21 @@ class FrendCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 1
+        return photoList.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! FrendCollectionViewCell
-        cell.frendLabel.text = frend
-        cell.frendImageView.image = UIImage(named: frend)
+//        cell.frendLabel.text = frend
+//        cell.frendImageView.image = UIImage(named: frend)
 //        let Photo = frend as! String
 //        let imageData = NSData(base64Encoded: Photo, options: NSData.Base64DecodingOptions.ignoreUnknownCharacters)
 //        let image = UIImage(data: imageData! as Data)
 //        // Configure the cell
-    
+        cell.frendLabel.text = photoList[indexPath.row].id
+        if let icon = URL(string: photoList[indexPath.row].url) {
+            cell.frendImageView.kf.setImage(with: icon)
+        }
         return cell
     }
 

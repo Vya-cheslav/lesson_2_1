@@ -10,6 +10,7 @@
 		781EABB320AECC9100F34660 /* addGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EABB220AECC9100F34660 /* addGroupCell.swift */; };
 		781EF05620B55E90005911DF /* VKLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781EF05520B55E90005911DF /* VKLoginViewController.swift */; };
 		78229AA620B6996F000E3DD8 /* VKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78229AA520B6996F000E3DD8 /* VKService.swift */; };
+		7827244220C0347D00804C71 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7827244120C0347D00804C71 /* Photo.swift */; };
 		782CA64D20A1AA980020A75A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CA64C20A1AA980020A75A /* AppDelegate.swift */; };
 		782CA64F20A1AA980020A75A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CA64E20A1AA980020A75A /* ViewController.swift */; };
 		782CA65220A1AA980020A75A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782CA65020A1AA980020A75A /* Main.storyboard */; };
@@ -18,15 +19,15 @@
 		782CA66320A1CC590020A75A /* UIView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CA66220A1CC590020A75A /* UIView+Layer.swift */; };
 		784509A420AA017D00294A9B /* AllFrendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784509A320AA017D00294A9B /* AllFrendsCell.swift */; };
 		784509A820AACF8700294A9B /* FrendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784509A720AACF8700294A9B /* FrendCollectionViewCell.swift */; };
-		784509AA20AAD90C00294A9B /* FrendCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784509A920AAD90C00294A9B /* FrendCollectionViewController.swift */; };
+		784509AA20AAD90C00294A9B /* PhotoViewCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784509A920AAD90C00294A9B /* PhotoViewCollectionViewController.swift */; };
 		784509AC20AC202400294A9B /* myGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784509AB20AC202400294A9B /* myGroupsTableViewCell.swift */; };
 		784509AE20AC3CAC00294A9B /* addGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784509AD20AC3CAC00294A9B /* addGroupTableViewCell.swift */; };
 		784509B020AC48D400294A9B /* groupAddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784509AF20AC48D400294A9B /* groupAddTableViewController.swift */; };
 		784D066D20A6E8AF00CC2D7F /* groupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784D066C20A6E8AF00CC2D7F /* groupsTableViewController.swift */; };
 		785DC84A20B9FCCA002C5F01 /* VKPresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785DC84920B9FCCA002C5F01 /* VKPresentationViewController.swift */; };
 		78A8DCFA20C01ED00023C534 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8DCF920C01ED00023C534 /* Groups.swift */; };
-		78BF283520A6E1AD0004E824 /* userTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BF283420A6E1AD0004E824 /* userTableViewController.swift */; };
-		78DE3FD620BF269E00AD24D5 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE3FD520BF269E00AD24D5 /* Users.swift */; };
+		78DE3FD620BF269E00AD24D5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE3FD520BF269E00AD24D5 /* User.swift */; };
+		78EBFC4120C1481E0088955E /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EBFC4020C1481E0088955E /* UserTableViewController.swift */; };
 		EED3F5E4C7A6A5A9A3490469 /* Pods_lesson_2_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A56E8016F277FAE5F82774 /* Pods_lesson_2_1.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		781EABB220AECC9100F34660 /* addGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addGroupCell.swift; sourceTree = "<group>"; };
 		781EF05520B55E90005911DF /* VKLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginViewController.swift; sourceTree = "<group>"; };
 		78229AA520B6996F000E3DD8 /* VKService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKService.swift; sourceTree = "<group>"; };
+		7827244120C0347D00804C71 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		782CA64920A1AA980020A75A /* lesson_2_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lesson_2_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		782CA64C20A1AA980020A75A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		782CA64E20A1AA980020A75A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,15 +49,15 @@
 		782CA66220A1CC590020A75A /* UIView+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layer.swift"; sourceTree = "<group>"; };
 		784509A320AA017D00294A9B /* AllFrendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFrendsCell.swift; sourceTree = "<group>"; };
 		784509A720AACF8700294A9B /* FrendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrendCollectionViewCell.swift; sourceTree = "<group>"; };
-		784509A920AAD90C00294A9B /* FrendCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrendCollectionViewController.swift; sourceTree = "<group>"; };
+		784509A920AAD90C00294A9B /* PhotoViewCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewCollectionViewController.swift; sourceTree = "<group>"; };
 		784509AB20AC202400294A9B /* myGroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myGroupsTableViewCell.swift; sourceTree = "<group>"; };
 		784509AD20AC3CAC00294A9B /* addGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addGroupTableViewCell.swift; sourceTree = "<group>"; };
 		784509AF20AC48D400294A9B /* groupAddTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupAddTableViewController.swift; sourceTree = "<group>"; };
 		784D066C20A6E8AF00CC2D7F /* groupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupsTableViewController.swift; sourceTree = "<group>"; };
 		785DC84920B9FCCA002C5F01 /* VKPresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKPresentationViewController.swift; sourceTree = "<group>"; };
 		78A8DCF920C01ED00023C534 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
-		78BF283420A6E1AD0004E824 /* userTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userTableViewController.swift; sourceTree = "<group>"; };
-		78DE3FD520BF269E00AD24D5 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		78DE3FD520BF269E00AD24D5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		78EBFC4020C1481E0088955E /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +135,9 @@
 		782CA65E20A1CB9D0020A75A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				78DE3FD520BF269E00AD24D5 /* Users.swift */,
+				78DE3FD520BF269E00AD24D5 /* User.swift */,
 				78A8DCF920C01ED00023C534 /* Groups.swift */,
+				7827244120C0347D00804C71 /* Photo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -155,12 +158,12 @@
 			isa = PBXGroup;
 			children = (
 				782CA64E20A1AA980020A75A /* ViewController.swift */,
-				784509A920AAD90C00294A9B /* FrendCollectionViewController.swift */,
+				784509A920AAD90C00294A9B /* PhotoViewCollectionViewController.swift */,
 				784D066C20A6E8AF00CC2D7F /* groupsTableViewController.swift */,
-				78BF283420A6E1AD0004E824 /* userTableViewController.swift */,
 				784509AF20AC48D400294A9B /* groupAddTableViewController.swift */,
 				781EF05520B55E90005911DF /* VKLoginViewController.swift */,
 				785DC84920B9FCCA002C5F01 /* VKPresentationViewController.swift */,
+				78EBFC4020C1481E0088955E /* UserTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -292,19 +295,20 @@
 			files = (
 				784D066D20A6E8AF00CC2D7F /* groupsTableViewController.swift in Sources */,
 				784509AE20AC3CAC00294A9B /* addGroupTableViewCell.swift in Sources */,
-				78BF283520A6E1AD0004E824 /* userTableViewController.swift in Sources */,
 				781EABB320AECC9100F34660 /* addGroupCell.swift in Sources */,
 				784509B020AC48D400294A9B /* groupAddTableViewController.swift in Sources */,
-				784509AA20AAD90C00294A9B /* FrendCollectionViewController.swift in Sources */,
+				784509AA20AAD90C00294A9B /* PhotoViewCollectionViewController.swift in Sources */,
 				784509A820AACF8700294A9B /* FrendCollectionViewCell.swift in Sources */,
 				782CA64F20A1AA980020A75A /* ViewController.swift in Sources */,
-				78DE3FD620BF269E00AD24D5 /* Users.swift in Sources */,
+				78DE3FD620BF269E00AD24D5 /* User.swift in Sources */,
 				785DC84A20B9FCCA002C5F01 /* VKPresentationViewController.swift in Sources */,
 				782CA66320A1CC590020A75A /* UIView+Layer.swift in Sources */,
 				784509AC20AC202400294A9B /* myGroupsTableViewCell.swift in Sources */,
+				7827244220C0347D00804C71 /* Photo.swift in Sources */,
 				78A8DCFA20C01ED00023C534 /* Groups.swift in Sources */,
 				784509A420AA017D00294A9B /* AllFrendsCell.swift in Sources */,
 				781EF05620B55E90005911DF /* VKLoginViewController.swift in Sources */,
+				78EBFC4120C1481E0088955E /* UserTableViewController.swift in Sources */,
 				78229AA620B6996F000E3DD8 /* VKService.swift in Sources */,
 				782CA64D20A1AA980020A75A /* AppDelegate.swift in Sources */,
 			);
