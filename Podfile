@@ -9,5 +9,7 @@ target 'lesson_2_1' do
 pod ‘Alamofire’
 pod ‘SwiftyJSON’
 pod ‘Kingfisher’
+pod 'RealmSwift'
+
 
 end

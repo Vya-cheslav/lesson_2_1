@@ -8,14 +8,27 @@
 
 import Foundation
 import SwiftyJSON
+import RealmSwift
 
-class Photo {
+class Photo: Object {
     
-    var id: String = ""
-    var url: String = ""
+   @objc dynamic  var id: String = ""
+   @objc dynamic  var url: String = ""
     
-    init(json: JSON) {
+    convenience init(json: JSON) {
+        self.init()
         self.id = json["id"].stringValue
         self.url = json["sizes"][0]["url"].stringValue
+    }
+    
+    func saveData(_ photo: [Photo]) {
+        do {
+            let realm = try Realm()
+            realm.beginWrite()
+            realm.add(photo)
+            try realm.commitWrite()
+        } catch {
+            print(error)
+        }
     }
 }

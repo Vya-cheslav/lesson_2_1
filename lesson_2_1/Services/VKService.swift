@@ -27,7 +27,9 @@ class VKService {
 
             if let data = data, let json = try? JSON(data: data) {
                 let users = json["response"].arrayValue.map { User(json: $0) }
+                
                 DispatchQueue.main.async {
+                    User().saveData(users)
                     completion?(users, nil)
                 }
                 
@@ -65,6 +67,7 @@ class VKService {
             if let data = data, let json = try? JSON(data: data) {
                 let groups = json["response"]["items"].arrayValue.map { Group(json: $0) }
                 DispatchQueue.main.async {
+                    Group().saveData(groups)
                     completion?(groups, nil)
                 }
                 
@@ -89,6 +92,7 @@ class VKService {
             if let data = data, let json = try? JSON(data: data) {
                 let photos = json["response"]["items"].arrayValue.map { Photo(json: $0) }
                 DispatchQueue.main.async {
+                    Photo().saveData(photos)
                     completion?(photos, nil)
                 }
                 

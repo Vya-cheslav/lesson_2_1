@@ -8,18 +8,31 @@
 
 import Foundation
 import SwiftyJSON
+import RealmSwift
 
-class User {
+class User: Object {
     
-    var firstname: String = ""
-    var id: String = ""
-    var lastname: String = ""
-    var photo50: String = ""
+    @objc dynamic var firstname: String = ""
+    @objc dynamic var id: String = ""
+    @objc dynamic var lastname: String = ""
+    @objc dynamic var photo50: String = ""
     
-    init(json: JSON) {
+    convenience init(json: JSON) {
+        self.init()
         self.firstname = json["first_name"].stringValue
         self.id = json["id"].stringValue
         self.lastname = json["last_name"].stringValue
         self.photo50 = json["photo_50"].stringValue
+    }
+    
+    func saveData(_ user: [User]) {
+        do {
+            let realm = try Realm()
+            realm.beginWrite()
+            realm.add(user)
+            try realm.commitWrite()
+        } catch {
+            print(error)
+        }
     }
 }
