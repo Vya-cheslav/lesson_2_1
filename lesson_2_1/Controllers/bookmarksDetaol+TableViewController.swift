@@ -7,67 +7,20 @@
 //
 
 import UIKit
-import Kingfisher
 
-class groupsTableViewController: UITableViewController {
+class history_TableViewController: UITableViewController {
 
-    @IBOutlet weak var addButton: UIBarButtonItem!
-    var token: String = ""
-    let service = VKService()
-    
-    var groupsList: [Group] = []
+    var strList: [String] = ["Москва", "London"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        service.getGroups(token: token) { groups, error in
-            if let error = error {
-                // handle error
-                print(error)
-                return
-            }
-            
-            if let groups = groups {
-                //print(#function)
-                self.groupsList = groups
-                self.tableView?.reloadData()
-            }
-        }
-        
-        //navigationController?.tabBarItem.badgeValue =   String(strList.count)
 
-        //navigationController?.tabBarController?.childViewControllers[0].tabBarItem.badgeValue = "00"
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-//    @IBAction func addGroup(segue: UIStoryboardSegue){
-//        guard let groupAddController = segue.source as? groupAddTableViewController else {
-//            return
-//        }
-//        if let indexPath = groupAddController.tableView.indexPathForSelectedRow {
-//
-//            var group = ""
-//
-//            if (groupAddController.filter.count > 0) {
-//
-//                group = groupAddController.filter[indexPath.row]
-//            }
-//            else {
-//
-//                group = groupAddController.strList[indexPath.row]
-//            }
-//
-//
-//
-//            guard !strList.contains(group) else {return}
-//            strList.append(group)
-//            tableView.reloadData()
-//            navigationController?.tabBarItem.badgeValue =   String(strList.count)
-//        }
-//    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -82,43 +35,19 @@ class groupsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return groupsList.count
+        return strList.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! myGroupsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        cell.groupTextLabel.text = groupsList[indexPath.row].name
-        if let icon = URL(string: groupsList[indexPath.row].photo50) {
-            cell.groupImageView.kf.setImage(with: icon)
-        }
+        cell.textLabel?.text = strList[indexPath.row]
         return cell
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueAddGroups" {
-            
-//            let destinationVC: groupAddTableViewController = segue.destination as! groupAddTableViewController
-//            for (_, value1) in groupsList.enumerated() {
-//                for (index2, value2) in destinationVC.strList.enumerated() {
-//                    if value1 == value2{
-//                        destinationVC.strList.remove(at: index2)
-//                    }
-//                }
-//            }
-        }
-    }
-//
+ 
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-//            strList.remove(at: indexPath.row)
-//            tableView.reloadData()
-//            navigationController?.tabBarItem.badgeValue =   String(strList.count)
-        }
-    }
-    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
