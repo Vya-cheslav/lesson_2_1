@@ -24,13 +24,22 @@ class User: Object {
         self.lastname = json["last_name"].stringValue
         self.photo50 = json["photo_50"].stringValue
     }
+   
+    
+    func getDate() -> [User] {
+        let realm = try! Realm()
+        return Array(realm.objects(User.self))
+    }
     
     func saveData(_ user: [User]) {
+        let realm = try! Realm()
+        let truncateDate = getDate()
+        
         do {
-            let realm = try Realm()
-            realm.beginWrite()
-            realm.add(user)
-            try realm.commitWrite()
+            try realm.write {
+                realm.delete(truncateDate)
+                realm.add(user)
+            }
         } catch {
             print(error)
         }

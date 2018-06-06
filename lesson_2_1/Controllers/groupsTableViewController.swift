@@ -26,11 +26,9 @@ class groupsTableViewController: UITableViewController {
                 return
             }
             
-            if let groups = groups {
-                //print(#function)
-                self.groupsList = groups
-                self.tableView?.reloadData()
-            }
+            let group = Group()
+            self.groupsList = group.getDate()
+            self.tableView?.reloadData()
         }
         
         //navigationController?.tabBarItem.badgeValue =   String(strList.count)

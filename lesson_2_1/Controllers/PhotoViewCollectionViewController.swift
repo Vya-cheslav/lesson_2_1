@@ -34,11 +34,9 @@ class PhotoViewCollectionViewController: UICollectionViewController {
                 return
             }
             
-            if let photo = photo {
-                //print(#function)
-                self.photoList = photo
-                self.collectionView?.reloadData()
-            }
+            let photo = Photo()
+            self.photoList = photo.getDate()
+            self.collectionView?.reloadData()
         }
         
         // Do any additional setup after loading the view.

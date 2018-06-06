@@ -19,11 +19,11 @@ class VKLoginViewController: UIViewController {
 
         let tokenUD = UserDefaults.standard.string(forKey: "token")
         
-        if  tokenUD != nil  {
-            token = tokenUD!
-            performSegue(withIdentifier: "segueLaterLogin", sender: nil)
-            return
-        }
+//        if  tokenUD != nil  {
+//            token = tokenUD!
+//            performSegue(withIdentifier: "segueLaterLogin", sender: nil)
+//            return
+//        }
         
         webView.navigationDelegate = self
         if let request = vkAuthRequest()  {
@@ -93,7 +93,7 @@ extension VKLoginViewController: WKNavigationDelegate {
 //            service.getGroups(token: token)
 //            service.getPhotosAll(token: token)
 //            service.search(token: token)
-            UserDefaults.standard.set(token, forKey: "token")
+            //UserDefaults.standard.set(token, forKey: "token")
             performSegue(withIdentifier: "segueLaterLogin", sender: nil)// segueView 
         }
         decisionHandler(.cancel)

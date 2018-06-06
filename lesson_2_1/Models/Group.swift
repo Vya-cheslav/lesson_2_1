@@ -23,12 +23,20 @@ class Group: Object {
         self.photo50 = json["photo_50"].stringValue
     }
     
+    func getDate() -> [Group] {
+        let realm = try! Realm()
+        return Array(realm.objects(Group.self))
+    }
+    
     func saveData(_ group: [Group]) {
+        let realm = try! Realm()
+        let truncateDate = getDate()
+        
         do {
-            let realm = try Realm()
-            realm.beginWrite()
-            realm.add(group)
-            try realm.commitWrite()
+            try realm.write {
+                realm.delete(truncateDate)
+                realm.add(group)
+            }
         } catch {
             print(error)
         }

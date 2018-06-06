@@ -21,12 +21,20 @@ class Photo: Object {
         self.url = json["sizes"][0]["url"].stringValue
     }
     
+    func getDate() -> [Photo] {
+        let realm = try! Realm()
+        return Array(realm.objects(Photo.self))
+    }
+    
     func saveData(_ photo: [Photo]) {
+        let realm = try! Realm()
+        let truncateDate = getDate()
+        
         do {
-            let realm = try Realm()
-            realm.beginWrite()
-            realm.add(photo)
-            try realm.commitWrite()
+            try realm.write {
+                realm.delete(truncateDate)
+                realm.add(photo)
+            }
         } catch {
             print(error)
         }
